@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "simdfx": {
+      "main": "src/simdfx/main.mo",
+      "type": "motoko"
+    },
+    "simdfx_assets": {
+      "dependencies": [
+        "simdfx"
+      ],
+      "frontend": {
+        "entrypoint": "src/simdfx_assets/src/index.html"
+      },
+      "source": [
+        "src/simdfx_assets/assets",
+        "dist/simdfx_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
